@@ -107,7 +107,8 @@ app.use((err, req, res, next)=>{
         res.status(status).redirect('/attractions');
 });
 
+const port = process.env.PORT || 3000;
 // Start Server
-app.listen(3000, ()=>{
-    console.log('PORT 3000');
+app.listen(port, ()=>{
+    console.log(`ON PORT ${port}`);
 });
