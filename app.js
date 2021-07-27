@@ -100,7 +100,7 @@ app.get('/', (req, res)=>{
 app.use((err, req, res, next)=>{    
     console.log(err);   
     const {status = 500, message = "Something Went Wrong!"} = err;
-    req.flash("error", message);
+   
     if(req.session.returnTo)
         res.status(status).redirect(req.session.returnTo);
     else
