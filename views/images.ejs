@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+
+<%- include('../partials/flash') %> 
+
+<div class = "container">  
+    <form action="/attractions/<%=attraction._id%>/images?_method=DELETE" method="POST">
+        <div class = "row py-4 position-relative">
+            <div class = "col-12 my-4">
+                <a class = "btn btn-secondary float-start"href="/attractions/edit/id?id=<%=attraction._id%>">Go Back</a>
+                <button class = "btn btn-danger position-absolute end-0 top-0 mt-3" >Delete Image(s)</button>
+            </div>       
+        </div>
+        <div class="row mb-3">
+            <% for(let j = 0;  j < attraction.images.length; j++) { %> 
+                <div class="col-3 mb-3 position-relative">
+                                    
+                    <img src="<%=attraction.images[j].thumbnail%>" class="" alt="..." >                 
+                    <div class = "form-check position-absolute top-0 end-0 rounded-circle me-4 my-2">
+                        <input class="form-check-input" type="checkbox" name="deleteImages[]" value="<%=attraction.images[j].filename%>" id="">
+                    </div>                            
+                    
+                </div>
+            <% } %>               
+        </div>
+   
+    </form>  
+</div>
+
+

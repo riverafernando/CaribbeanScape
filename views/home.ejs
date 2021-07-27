@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+
+</head>
+<body class = "d-flex flex-column bg-dark vw-100 vh-100 myContainer">
+    
+    <div class = "container-fluid cover-container w-100 pt-2 mb-5 ">
+        <h3 class = " float-start text-light">CaribbeanScape</h3>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+            <% if(!currentUser) { %> 
+              <a class="nav-link active" href="/register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register/login">Login</a>
+            </li>
+            <% } else { %> 
+            <li class="nav-item">
+              <a class="nav-link" href="">Logout</a>
+            </li>
+            <% } %> 
+            <li class="nav-item">
+              <a class="nav-link" href="/attractions">Vacation Spots</a>
+            </li>
+        </ul>
+    </div>
+    <div class ="description-container d-flex flex-column container w-50 h-50 text-white align-items-center justify-content-center my-5 rounded-3">
+        <h3 class ="">CaribbeanScape</h3>
+        <span>Welcome to CaribbeanScape!</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptates quod numquam ut atque quis magnam repudiandae quidem quisquam. Laboriosam quam ullam aspernatur! Odio modi eos vitae, mollitia sint libero!</p>
+        <a class="btn btn-outline-light" href="/attractions">View Vacation Spots</a>
+    </div>
+
+</body>
+</html>

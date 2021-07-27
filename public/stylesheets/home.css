@@ -1,0 +1,29 @@
+.myContainer{
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0)),
+        url('https://res.cloudinary.com/frivera/image/upload/e_sharpen/v1626875614/CaribbeanScape/home/pexels-photo-3293148_qdnppu.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+.cover-container{
+
+    max-width: 75vw;
+}
+.description-container > a{
+    box-shadow: 2px 2px 5px 1px rgba(66, 49, 49, 0.3);;
+}
+
+.nav-link{
+   color: rgba(255,255,255,0.6);
+
+
+}
+
+
+.cover-container a:hover{
+    border-bottom: 0.1em solid;
+    border-color: white;
+    padding-top: 0.2em;
+    color: rgb(255,255,255);
+    
+
+}
