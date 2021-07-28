@@ -40,7 +40,6 @@ module.exports.validateAttraction = async function(req, res, next) {
     const attractionSchema = Joi.object().keys({
         name: Joi.string().required().escapeHTML(),
         location: Joi.string().required().escapeHTML(),
-        country: Joi.string().required().escapeHTML(),
         description: Joi.string().required().escapeHTML(),
     });
    
