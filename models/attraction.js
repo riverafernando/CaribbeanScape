@@ -47,11 +47,7 @@ const AttractionSchema = new Schema({
         type: String,
         required: true
     },
-    country: {
-        type: String,
-        required: true
-    }, 
-
+    
     images:[ImageSchema], 
    
     // reference to author schema

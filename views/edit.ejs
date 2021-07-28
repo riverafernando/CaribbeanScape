@@ -5,10 +5,8 @@
     <form action="/attractions/<%=attraction._id%>?_method=PUT" method = "POST" enctype="multipart/form-data">
         <label class = "form-label" for="name">Name</label>
         <input id="name" class = "form-control mb-4 w-50" type="text"  name = "name" value="<%=attraction.name%>">
-        <label class = "form-label" for="location">Location</label>
+        <label class = "form-label" for="location">Location/Address</label>
         <input id="location" class = "form-control mb-4 w-50" type="text"  name="location" value="<%=attraction.location%>" >
-        <label class = "form-label" for="country">Country</label>
-        <input id="country" class = "form-control mb-4 w-50" type="text"  name="country" value="<%=attraction.country%>">
         <label class = "form-label" for="description">Description</label>
         <textarea  id="description" class = "form-control mb-4 w-50" name="description" id="" cols="30" rows="10" "><%=attraction.description%></textarea>
         <label class = "form-label" for="images">Upload New Images</label>
