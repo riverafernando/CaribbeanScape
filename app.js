@@ -20,8 +20,7 @@ const reviewsRoutes = require('./routes/reviews');
 const usersRoutes = require('./routes/users');
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/attraction';
 const secret = process.env.SECRET || 'mysecret';
-// Connects to database, specifies which db to use, creates if no exists
-// 
+
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     touchAfter: 24 * 3600, // time period in seconds,
@@ -47,15 +46,12 @@ const app = express();
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs'); // Allows rendering of ejs files in views directory
-path.join('views', path.join(__dirname, 'views')); // Allows runngin out of folder??
-
+path.join('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: true})); // Parses incoming url request body
 app.use(express.json()); // Parses incoming Request Object (req) to json
-app.use(methodOverride('_method')); // Used for more CRUD functionallty i.e. Delete and Put request
+app.use(methodOverride('_method')); // Used for more CRUD functionality i.e. Delete and Put request
 app.use(express.static(path.join(__dirname,'public')))
 app.use(mongoSanitize()); // Prevent database injection queries
-
-
 
 app.use(session({
     store,
@@ -108,6 +104,7 @@ app.use((err, req, res, next)=>{
 });
 
 const port = process.env.PORT || 3000;
+
 // Start Server
 app.listen(port, ()=>{
     console.log(`ON PORT ${port}`);

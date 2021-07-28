@@ -2,37 +2,25 @@
 <div class ="container"><%- include('../partials/flash') %></div>
 
 <div class = "container d-flex vh-100 w-100 justify-content-center">
-   
     <div class="row">
-       
         <div class="col">
-
             <div class="card rounded mt-5 shadow" style="width: 30rem;">
-        
                 <div class="card-body">
-                 
                     <h5 class="card-title">New Vacation Spot</h5>
                     <form action="/attractions" method = "POST" class="form-validation" enctype="multipart/form-data" novalidate >
-
                         <input class="form-control mb-3"type="text" placeholder = "Enter Name" name= "name" required>
                         <input class ="form-control mb-3" type="text" placeholder = "Enter Location" name= "location" required>
                         <input class ="form-control mb-3" type="text" placeholder = "Enter Country" name = "country" required>
                         <textarea class = "form-control mb-3" name="description" id="" cols="30" rows="5" placeholder = "Enter A Description" required></textarea>
                         <input type="file" name="images" multiple> <br>
                         <button class=" btn btn-success mt-2 float-end">Add Vacation Spot</button>
-                
                      </form> 
                 </div>
-              </div>
+            </div>
         </div>
-    </div>
-    
+    </div>    
 </div>
 
-
-    
-
-<!-- Adds from listener creates local function with no name then invokes -->
    
 
     

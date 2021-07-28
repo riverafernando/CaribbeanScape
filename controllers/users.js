@@ -6,16 +6,16 @@ module.exports.renderRegistrationForm = (req, res)=>{
  module.exports.register = async(req, res)=>{
     
     try{
-
         const {email, username, password} = req.body;
         const user = new User({email, username});
         const registeredUser = await User.register(user, password);
 
-        // automatically attempts login after registration
+        // Automatically attempts login after registration
         req.login(registeredUser, (err)=>{
             if(err) return next(err);
             
             req.flash('success', 'Welcome to CaribbeanScape!');
+
             // Return to previous page after login if it exists
             if(req.session.returnTo)
                 res.redirect(req.session.returnTo);

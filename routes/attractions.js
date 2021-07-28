@@ -4,7 +4,6 @@ const {wrapAsync, validateAttraction, isLoggedIn, isAuthorAttraction} = require(
 const multer  = require('multer');
 const {storage} = require('../cloudinary');
 const upload = multer({ storage});
-//var upload = multer({ dest: 'uploads/' })
 
 // Controller for attractions
 const attractions = require('../controllers/attractions');
@@ -12,10 +11,8 @@ const attractions = require('../controllers/attractions');
 // Main page for displaying all attractions
 router.get('/', wrapAsync(attractions.index));
 
-/** MAKE SURE THE NEW ROUTE IS BEFORE SHOW ROUTE TO AVOID ISSUES*/
 // Generate template for creating a new attraction
 router.get('/new', isLoggedIn, attractions.renderNewForm);
-
   
 // Show Page for displying a single attraction in more detail
 router.get('/id?', wrapAsync(attractions.show));

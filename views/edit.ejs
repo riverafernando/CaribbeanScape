@@ -2,7 +2,6 @@
     
 <div class = "container py-5 w-100">
     <h3 class = "mb-3">Edit Attraction Site</h3>
-   
     <form action="/attractions/<%=attraction._id%>?_method=PUT" method = "POST" enctype="multipart/form-data">
         <label class = "form-label" for="name">Name</label>
         <input id="name" class = "form-control mb-4 w-50" type="text"  name = "name" value="<%=attraction.name%>">
@@ -17,9 +16,7 @@
         <a class = "btn btn-primary ms-2 mb-1" href="/attractions/<%=attraction._id%>/images">View Existing Images</a>
         <br>
         <button class= "btn btn-info text-white ">Update Attraction</button>
-        
     </form>
-   
     <a class ="btn btn-secondary my-3" href="/attractions/id?id=<%=attraction._id%>">Go Back</a>
 </div>
    

@@ -7,7 +7,7 @@ const mapBoxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const mapBoxToken = process.env.MAPBOX_TOKEN;
 const geocoder = mapBoxGeocoding({accessToken : mapBoxToken});
 
-// Checks if corrdiantes are in the caribbean
+// Checks if coordinates are in the caribbean
 function inbounds(long, lat){
     return long >= -105 && long <= -45 && lat <= 40 && lat >= 0;
 }

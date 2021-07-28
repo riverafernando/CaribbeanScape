@@ -72,7 +72,6 @@ AttractionSchema.virtual('properties.popUpHTML').get(function(){
 });
 
 
-
 // Middleware for deleting campground and all reviews and images
 AttractionSchema.post('findOneAndDelete', async function(doc){
     if(doc)
@@ -83,7 +82,6 @@ AttractionSchema.post('findOneAndDelete', async function(doc){
                 $in: doc.reviews
             }
         });
-
      
         // delete images in cloudinary database
         for(let images of doc.images)          
