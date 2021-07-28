@@ -51,11 +51,11 @@ module.exports.createAttraction = async (req, res)=>{
     
     const {name, location, country, description, geometry} = req.body; 
     const newAttraction = new Attraction({
-        name: name.toLowerCase(), 
-        location: location.toLowerCase(), 
-        country: country.toLowerCase(),
+        name,
+        location, 
+        country,
         images: req.files.map(f => ({url: f.path, filename: f.filename})),
-        description: description.toLowerCase(),
+        description,
         author: req.user._id,
         geometry: geometry,
         rating: 0

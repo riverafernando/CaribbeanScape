@@ -48,10 +48,9 @@
           <% } %> 
           
         <h5 class="card-title display-6 fw-bold mx-3 mt-3">Welcome To <%=attraction.name%>!</h5>
-        <p class="card-text px-4 mb-3"><%=attraction.description%> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae beatae, id iste, ipsam animi 
-            dolorum sequi maxime veritatis quis dolores necessitatibus tempore molestiae sapiente possimus perspiciatis! Doloribus deserunt qui labore!</p>
+        <p class="card-text px-4 mb-3"><%=attraction.description%></p>
         <ul class="list-group list-group-flush">
-          <li class = "list-group-item text-muted">Located in <%=`${attraction.location}`%><%=attraction.country%></li>
+          <li class = "list-group-item text-muted">Located in <%=`${attraction.location}`%>, <%=attraction.country%></li>
           <li class = "list-group-item fst-italic text">Submitted by <%=`${attraction.author.username}`%></li>
         </ul>
   
